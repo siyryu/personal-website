@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.logo {
+    font-family: monospace;
+    font-size: 16px;  /* 设置字体大小为16px */
+    color: #333;
+    text-align: center;
+    white-space: pre;
+    line-height: 1.2;
+    animation: fadeIn 2s forwards;
+    position: relative;
+}
+
+.char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(300%);
+    animation: flyIn ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flyIn {
+    from {
+        opacity: 0;
+        transform: translateY(300%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 第一行 */
+.char:nth-child(-n+19) {
+    animation-duration: 1s;
+}
+.char:nth-child(-n+19):nth-child(6n+1) { animation-delay: 0.1s; }
+.char:nth-child(-n+19):nth-child(6n+2) { animation-delay: 0.2s; }
+.char:nth-child(-n+19):nth-child(6n+3) { animation-delay: 0.3s; }
+.char:nth-child(-n+19):nth-child(6n+4) { animation-delay: 0.4s; }
+.char:nth-child(-n+19):nth-child(6n+5) { animation-delay: 0.5s; }
+.char:nth-child(-n+19):nth-child(6n) { animation-delay: 0.6s; }
+
+/* 第二行 */
+.char:nth-child(n+20):nth-child(-n+48) {
+    animation-duration: 1.3s;
+}
+.char:nth-child(n+20):nth-child(-n+48):nth-child(6n+1) { animation-delay: 0.2s; }
+.char:nth-child(n+20):nth-child(-n+48):nth-child(6n+2) { animation-delay: 0.4s; }
+.char:nth-child(n+20):nth-child(-n+48):nth-child(6n+3) { animation-delay: 0.6s; }
+.char:nth-child(n+20):nth-child(-n+48):nth-child(6n+4) { animation-delay: 0.8s; }
+.char:nth-child(n+20):nth-child(-n+48):nth-child(6n+5) { animation-delay: 1s; }
+.char:nth-child(n+20):nth-child(-n+48):nth-child(6n) { animation-delay: 1.2s; }
+
+/* 第三行 */
+.char:nth-child(n+49):nth-child(-n+77) {
+    animation-duration: 1.6s;
+}
+.char:nth-child(n+49):nth-child(-n+77):nth-child(6n+1) { animation-delay: 0.3s; }
+.char:nth-child(n+49):nth-child(-n+77):nth-child(6n+2) { animation-delay: 0.6s; }
+.char:nth-child(n+49):nth-child(-n+77):nth-child(6n+3) { animation-delay: 0.9s; }
+.char:nth-child(n+49):nth-child(-n+77):nth-child(6n+4) { animation-delay: 1.2s; }
+.char:nth-child(n+49):nth-child(-n+77):nth-child(6n+5) { animation-delay: 1.5s; }
+.char:nth-child(n+49):nth-child(-n+77):nth-child(6n) { animation-delay: 1.8s; }
+
+/* 第四行 */
+.char:nth-child(n+78):nth-child(-n+106) {
+    animation-duration: 1.9s;
+}
+.char:nth-child(n+78):nth-child(-n+106):nth-child(6n+1) { animation-delay: 0.4s; }
+.char:nth-child(n+78):nth-child(-n+106):nth-child(6n+2) { animation-delay: 0.8s; }
+.char:nth-child(n+78):nth-child(-n+106):nth-child(6n+3) { animation-delay: 1.2s; }
+.char:nth-child(n+78):nth-child(-n+106):nth-child(6n+4) { animation-delay: 1.6s; }
+.char:nth-child(n+78):nth-child(-n+106):nth-child(6n+5) { animation-delay: 2s; }
+.char:nth-child(n+78):nth-child(-n+106):nth-child(6n) { animation-delay: 2.4s; }
+
+/* 第五行 */
+.char:nth-child(n+107):nth-child(-n+135) {
+    animation-duration: 2.2s;
+}
+.char:nth-child(n+107):nth-child(-n+135):nth-child(6n+1) { animation-delay: 0.5s; }
+.char:nth-child(n+107):nth-child(-n+135):nth-child(6n+2) { animation-delay: 1s; }
+.char:nth-child(n+107):nth-child(-n+135):nth-child(6n+3) { animation-delay: 1.5s; }
+.char:nth-child(n+107):nth-child(-n+135):nth-child(6n+4) { animation-delay: 2s; }
+.char:nth-child(n+107):nth-child(-n+135):nth-child(6n+5) { animation-delay: 2.5s; }
+.char:nth-child(n+107):nth-child(-n+135):nth-child(6n) { animation-delay: 3s; }
+
+/* 第六行 */
+.char:nth-child(n+136) {
+    animation-duration: 2.5s;
+}
+.char:nth-child(n+136):nth-child(6n+1) { animation-delay: 0.6s; }
+.char:nth-child(n+136):nth-child(6n+2) { animation-delay: 1.2s; }
+.char:nth-child(n+136):nth-child(6n+3) { animation-delay: 1.8s; }
+.char:nth-child(n+136):nth-child(6n+4) { animation-delay: 2.4s; }
+.char:nth-child(n+136):nth-child(6n+5) { animation-delay: 3s; }
+.char:nth-child(n+136):nth-child(6n) { animation-delay: 3.6s; }
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 12px;  /* 恢复移动设备上的字体大小 */
+    }
+}

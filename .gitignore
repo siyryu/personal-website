@@ -29,6 +29,5 @@ build/
 .env.local
 .env.*.local
 
-# 已经在.dockerignore中忽略的文件，这里再次确认
-Dockerfile
+# 保留 Dockerfile，但仍然忽略 .dockerignore
 .dockerignore
